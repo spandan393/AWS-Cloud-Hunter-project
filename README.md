@@ -19,3 +19,12 @@ GOAL: Enable a role in one account (Source: 111111111111) to temporarily access 
 CRITICAL ACTION: The Target role's Trust Policy must explicitly allow the `sts:AssumeRole` action from the Source role.
 
 WHY THIS IS SECURE: This prevents the need to share long-lived credentials (like Access Keys) and grants only temporary, short-lived tokens, which is the industry standard for cloud access.
+
+## 3. Project: Preventative Security Guardrails
+
+### Skill Demonstrated: Condition Key Enforcement
+
+This section demonstrates how to use IAM Condition Keys to enforce the highest level of security, blocking access based on how and where the user is logging in.
+
+#### A. MFA Enforcement (Stopping Stolen Passwords) Key Condition Used: `aws:IsMultiFactorAuthPresent` Logic: Policy is set to DENY access unless this condition key is set to 'true'. This prevents access if an attacker has stolen the user's password but does not have their MFA token. 
+#### B. IP Restriction (Stopping Remote Attackers) Key Condition Used: `aws:SourceIp` Logic: Policy denies access if the request does not originate from a specific, secure company IP address range (e.g., 192.168.1.0/24). This is used to lock down highly sensitive resources like admin roles.
