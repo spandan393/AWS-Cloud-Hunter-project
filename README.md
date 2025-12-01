@@ -9,3 +9,13 @@ GOAL: Prevent attackers from using the dangerous wildcard '*' (full control) in 
 
 **REQUIRED ACTIONS:** To list files: `s3:ListBucket` To download files: `s3:GetObject` 
 This policy demonstrates compliance with the core AWS security principle of granting only the minimum permissions needed.
+
+## 2. Project: Secure Cross-Account Access
+
+### Skill Demonstrated: Trust Policy Implementation (Incident Prevention)
+
+GOAL: Enable a role in one account (Source: 111111111111) to temporarily access resources in another account (Target: 222222222222).
+
+CRITICAL ACTION: The Target role's Trust Policy must explicitly allow the `sts:AssumeRole` action from the Source role.
+
+WHY THIS IS SECURE: This prevents the need to share long-lived credentials (like Access Keys) and grants only temporary, short-lived tokens, which is the industry standard for cloud access.
