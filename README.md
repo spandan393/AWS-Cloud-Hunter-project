@@ -1,3 +1,9 @@
+# 🛡️ CLOUD HUNTER PROJECT PORTFOLIO 🛡️
+
+### Practical Cloud Security Engineering & AWS IAM Hardening
+
+---
+
 # AWS-Cloud-Hunter-project
 Demonstrating practical AWS security hardening using IAM , S3 , and , CloudTrail.
 
@@ -27,4 +33,13 @@ WHY THIS IS SECURE: This prevents the need to share long-lived credentials (like
 This section demonstrates how to use IAM Condition Keys to enforce the highest level of security, blocking access based on how and where the user is logging in.
 
 #### A. MFA Enforcement (Stopping Stolen Passwords) Key Condition Used: `aws:IsMultiFactorAuthPresent` Logic: Policy is set to DENY access unless this condition key is set to 'true'. This prevents access if an attacker has stolen the user's password but does not have their MFA token. 
-#### B. IP Restriction (Stopping Remote Attackers) Key Condition Used: `aws:SourceIp` Logic: Policy denies access if the request does not originate from a specific, secure company IP address range (e.g., 192.168.1.0/24). This is used to lock down highly sensitive resources like admin roles.
+#### B. IP Restriction (Stopping Remote Attackers) Key Condition Used: `aws:SourceIp` Logic: Policy denies access if the request does not originate from a specific, secure company IP address range (e.g., 192.168.1.0/24). This is used to lock down 
+
+---
+### 🤝 Let's Connect
+
+Available for: Part-time, flexible, remote contract work (IAM/S3/CloudTrail Auditing)
+Contact: spandhan.panta@gmail.com
+Certification Progress: Actively studying for AWS Certified Security - Specialty
+highly sensitive resources like admin roles.
+
